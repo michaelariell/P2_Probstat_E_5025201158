@@ -173,13 +173,10 @@ Tidak terdapat perbedaan rata-rata jika ditinjau dari uji statistik, namun akan 
 
 ## Penjelasan Soal No 4
 ## ==> A
-<br>
 Buatlah masing masing jenis spesies menjadi 3 subjek "Grup" (grup 1,grup 2,grup 3). Lalu Gambarkan plot kuantil normal untuk setiap kelompok dan lihat apakah ada outlier utama dalam homogenitas varians.
-<br>
 <br>
 Langkah pertama mengambil data dari link yang telah disediadakan, selanjutnya buat `setFile` menjadi group, dicek apakah dia menyimpan nilai groupnya.
 Diakhir bagi tiap valuer menjadi 3 bagian ke 3 grup. Untuk algoritmanya dapat dilihat sebagai berikut
-<br>
 ```c
 setFile  <- read.table(url("https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt"))
 dim(setFile)
@@ -197,48 +194,36 @@ group3 <- subset(setFile, V1=="Kucing Putih")
 ```
 
 ## ==> B
-<br>
 Carilah atau periksalah Homogeneity of variances nya , Berapa nilai p yang didapatkan? , Apa hipotesis dan kesimpulan yang dapat diambil ?
 <br>
-<br>
 Homogeneity of variances dapat dicari dengan menggunakan command sebagai berikut
-<br>
 ```c
 bartlett.test(Length~V1, data=dataoneway)
 ```
-<br>
 Setelah di jalankan maka nilai p-value = 0.8054. Sehingga dapat disimpulkan bahwa Bartlett's K-squared memiliki nilai sebesar 0.43292 dan df bernilai 2
-<br>
 
 ## ==> C
-<br>
 Untuk uji ANOVA (satu arah), buatlah model linier dengan Panjang versus Grup dan beri nama model tersebut model 1.
 <br>
-<br>
 Untuk algoritma modelnya dapat dilihat sebagai berikut
-<br>
 ```c
 qqnorm(group1$Length)
 qqline(group1$Length)
 ```
 Untuk tampilan gambar modelnya dapat dilihat sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170877162-2e4075c1-ca48-4892-a0fa-754c429b3ee9.png)
+<br>
 
 ## ==> D
-<br>
 Dari Hasil Poin C, Berapakah nilai-p ? , Apa yang dapat Anda simpulkan dari H0?
 <br>
-<br>
 Setelah di jalankan maka nilai p-value = 0.8054
-<br>
 
 ## ==> E
-<br>
 Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain? 3 Jelaskan.
 <br>
-<br>
 Pertama-tama gunakanlah command ANOVA, kemudian menggunakan command `anova(model1)`, dan terakhir gunakanlah model Post-hoc Tukey HSD sebagai berikut.
-<br>
 ```c
 model1 <- lm(Length~Group, data=setFile)
   
@@ -248,12 +233,9 @@ TukeyHSD(aov(model1))
 ```
 
 ## ==> F
-<br>
 Visualisasikan data dengan ggplot2
 <br>
-<br>
 Algoritma visualisasi data dapat dilihat sebagai berikut
-<br>
 ```c
 library(ggplot2)
 ggplot(dataoneway, aes(x = Group, y = Length)) + geom_boxplot(fill = "grey80", 
@@ -263,12 +245,9 @@ ggplot(dataoneway, aes(x = Group, y = Length)) + geom_boxplot(fill = "grey80",
 
 ## Penjelasan Soal No 5
 ## ==> A
-<br>
 Buatlah plot sederhana untuk visualisasi data
 <br>
-<br>
 Jalankan semua library yang diperlukan, kemudian baca file GTL.csv dari documents sebagai berikut
-<br>
 ```c
 install.packages("multcompView")
 library(readr)
@@ -280,6 +259,7 @@ GTL <- read_csv("GTL.csv")
 head(GTL)
 ```
 Didapatkan hasil sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170877825-af6f4ec3-fac3-4ecd-a70c-b6931047e1f5.png)
 <br>
 Kemudian lakukan observasi pada data menggunakan `str(GTL)` dan didapatkan hasil sebagai berikut.
@@ -287,46 +267,43 @@ Kemudian lakukan observasi pada data menggunakan `str(GTL)` dan didapatkan hasil
 ![image](https://user-images.githubusercontent.com/89970736/170878093-2075afa5-6bb7-4a5d-9d17-585421854df5.png)
 <br>
 Selanjutnya lakukan viasualisasi menggunakan simple plot sebagai berikut
-<br>
 ```c
 qplot(x = Temp, y = Light, geom = "point", data = GTL) +
     facet_grid(.~Glass, labeller = label_both)
 ```
 Dan didapatkan tampilan sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170877992-68dda0fc-3cd4-41c7-8723-ea9d7298a67e.png)
+<br>
 
 ## ==> B
-<br>
 Lakukan uji ANOVA dua arah
 <br>
-<br>
 Di awal kita akan membuat variabel as factor sebagai ANOVA sebagai berikut
-<br>
 ```c
 GTL$Glass <- as.factor(GTL$Glass)
 GTL$Temp_Factor <- as.factor(GTL$Temp)
 str(GTL)
 ```
 Untuk hasil runningnya adalah sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170878387-f75143b7-a41c-4f81-b427-b6e90f45951c.png)
 <br>
 Kemudian lakukan Analisis of Variance (AOV) sebagai berikut
-<br>
 ```c
 anova <- aov(Light ~ Glass*Temp_Factor, data = GTL)
 summary(anova)
 ```
 Didapatkan hasil analisis sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170878541-cb0f46a2-c1a7-424d-9d4a-a9d70967b09b.png)
+<br>
 
 ## ==> C
-<br>
 Tampilkan tabel dengan mean dan standar deviasi keluaran cahaya untuk setiap perlakuan (kombinasi kaca pelat muka dan suhu operasi)
-<br>
 <br>
 Untuk menampilkan tabel mean dan standar deviasi keluaran cahaya untuk setiap perlakuan, dapat digunakan `group_by()` diikuti dengan `summarise()` sebagai
 berikut.
-<br>
 ```c
 data_summary <- group_by(GTL, Glass, Temp) %>%
    summarise(mean=mean(Light), sd=sd(Light)) %>%
@@ -334,45 +311,43 @@ data_summary <- group_by(GTL, Glass, Temp) %>%
 print(data_summary)
 ```
 Didapatkan tampilan tabelnya sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170878858-fbf815c7-27df-4499-92cc-c33b04249724.png)
+<br>
 
 ## ==> D
-<br>
 Lakukan uji Tukey
 <br>
-<br>
 Lakukan uji Tukey dengan engan menggunakan `TukeyHSD` sebagai berikut
-<br>
 ```c
 tukey <- TukeyHSD(anova)
 print(tukey)
 ```
 Didapatkan hasil uji Tukey sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170879072-b6e51b51-ac84-4533-b36d-511757c71f8b.png)
 <br>
 ![image](https://user-images.githubusercontent.com/89970736/170879144-d5ad1023-3515-46bf-a0cd-128a20dc9d3d.png)
 <br>
 
 ## ==> E
-<br>
 Gunakan compact letter display untuk menunjukkan perbedaan signifikan antara uji Anova dan uji Tukey
 <br>
-<br>
 Pertama-tama buatlah compact letter display sebagai berikut
-<br>
 ```c
 tukey.cld <- multcompLetters4(anova, tukey)
 print(tukey.cld)
 ```
 Adapun displaynya sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170879420-d80d5bdc-8939-4034-924e-895eadde9cef.png)
 <br>
 Tambahkan compact letter display tersebut ke tabel dengan mean dan sd sebagai berikut
-<br>
 ```c
 cld <- as.data.frame.list(tukey.cld$`Glass:Temp_Factor`)
 data_summary$Tukey <- cld$Letters
 print(data_summary)
 ```
 Adapun hasil yang didapatkan adalah sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170879624-c13a8344-7980-442e-9844-27d6d1066c1d.png)
