@@ -81,60 +81,60 @@ Dapat kita lihat bahwa mean dan convidence sama dengan 1b, yang berbeda adalah p
 
 ## Penjelasan Soal No 2
 ## ==> A
-<br>
 Apakah Anda setuju dengan klaim tersebut?
 <br>
+```c
 Setuju
+```
 
 ## ==> B
-<br>
 Jelaskan maksud dari output yang dihasilkan!
 <br>
 ![image](https://user-images.githubusercontent.com/89970736/170874793-fb8d9b41-ed38-495d-9cfe-f74cdbd92f9e.png)
+<br>
 Diketahui n = 100, Rata-Rata (X̄) = 23500, dan standar deviasi(σ) = 3900, sehingga null hipotesisnya adalah H0 : μ = 20000 dan alternatif hipotesisnya adalah H1 : μ > 20000
 
 ## ==> C
-<br>
 Buatlah kesimpulan berdasarkan P-Value yang dihasilkan!
-<br>
 <br>
 Setelah dilakukan perhitungan, didapatkan bahwa z = 8.97, dan P-value = 0. Dari sini dapat ditarik kesimpulan bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun.
 <br>
 
 ## Penjelasan Soal No 3
 Tabel :
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170874957-70e70fc1-4682-4c1e-a522-9e2f515a60a8.png)
+<br>
 Hitunglah :
 ## ==> A
-<br>
 H0 dan H1
 <br>
 H0 dan H1 dilakukan perhitungan H0 sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170875061-8ebd36c3-1b39-460e-bd4e-d8374ec14a58.png)
+<br>
 dilakukan perhitungan H1 sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170875102-1d8e53e6-f85f-46af-8975-de03682d90dc.png)
+<br>
 
 ## ==> B
-<br>
 Hitung Sampel Statistik
 <br>
-<br>
 Dilakukan perhitungan sampel statistik sebagai berikut
-<br>
 ```c
 tsum.test(mean.x = 3.64, s.x = 1.67, n.x = 19, mean.y = 2.79 , s.y = 1.32,
           n.y = 27, alternative = "greater", var.equal = TRUE)
 ```
 Didapatkan hasil sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170875487-d362f274-89b6-4d88-a550-daa258d5f024.png)
+<br>
 
 ## ==> C
-<br>
 Lakukan Uji Statistik (df =2)
 <br>
-<br>
 Lakukan install library `mosaic` sebagai berikut
-<br>
 ```c
 install.packages("mosaic")
 library(mosaic)
@@ -142,34 +142,31 @@ library(mosaic)
 plotDist(dist='t', df=2, col="blue")
 ```
 Didapatkan hasil uji statistik sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170875651-50505f21-a6a9-45f0-8608-eec8f8c16b20.png)
+<br>
 
 ## ==> D
-<br>
 Nilai Kritikal
 <br>
-<br>
 Adapun cara untuk mendapatkan nilai kritikal bisa menggunakan `qchisq` dengan `df=2` sesuai soal sebelumnya sebagai berikut
-<br>
 ```c
 qchisq(p = 0.05, df = 2, lower.tail=FALSE)
 ```
 Adapun hasil yang didapatkan sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170875841-2a075b99-f8eb-4fd2-a0e9-2c5a4d9b64b0.png)
+<br>
 
 ## ==> E
-<br>
 Keputusan
-<br>
 <br>
 Teori keputusan adalah teori formal pengambilan keputusan di bawah ketidakpastian. Aksinya adalah :`({a}_{a∈A})` Kemungkinan konsekuensi : `({c}_{c∈C})`
 (tergantung pada keadaan dan tindakan) Maka keputusan dapat dibuat dengan `t.test`
 <br>
 
 ## ==> F 
-<br>
 Kesimpulan
-<br>
 <br>
 Tidak terdapat perbedaan rata-rata jika ditinjau dari uji statistik, namun akan ada (tidak signifikan) jika dipengaruhi nilai kritikal.
 <br>
