@@ -20,7 +20,6 @@ Pertama-tama masukkan semua data yang ada pada tabel pada sebuah variabel sebaga
 sebelum <- c(78, 75, 67, 77, 70, 72, 28, 74, 77)
 sesudah <- c(100, 95, 70, 90, 90, 90, 89, 90, 100)
 ```
-<br>
 Kemudian lakukan pengecekan data menggunakan `data.frame` dan lihat hasilnya sebagai berikut
 <br>
 ```c
@@ -30,7 +29,6 @@ data <- data.frame(
        )
 print(data)
 ```
-<br>
 ![image](https://user-images.githubusercontent.com/89970736/170873599-581f7428-ca3a-48c5-b8b2-538af1bbe9ca.png)
 Setelah itu carilah standar deviasinya sebagai berikut
 <br>
