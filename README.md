@@ -49,7 +49,6 @@ Dan didapatkan hasilnya sebagai berikut
 ## ==> B
 <br>
 Carilah nilai t (p-value)
-<br>
 Cari nilai t terutama p-value maka bisa menggunakan fungsi `t.test` yaitu sebagai berikut
 ```c
 t.test(sebelum, sesudah, alternative = "greater", var.equal = FALSE)
