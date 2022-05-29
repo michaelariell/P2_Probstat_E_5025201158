@@ -12,9 +12,7 @@ Tabel :
 <br>
 ![image](https://user-images.githubusercontent.com/89970736/170873936-98b059f8-2f1d-4547-9b32-a7ddb743a5fb.png)
 ## ==> A
-<br>
 Carilah Standar Deviasi dari data selisih pasangan pengamatan tabel diatas
-<br>
 <br>
 Pertama-tama masukkan semua data yang ada pada tabel pada sebuah variabel sebagai berikut
 <br>
