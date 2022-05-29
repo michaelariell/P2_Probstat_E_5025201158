@@ -8,7 +8,9 @@ Michael Ariel Manihuruk     | PROBSTAT E                | 5025201158
 
 
 ## Penjelasan Soal No 1
+<br>
 Tabel :
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170873936-98b059f8-2f1d-4547-9b32-a7ddb743a5fb.png)
 ## ==> A
 <br>
@@ -21,7 +23,9 @@ Pertama-tama masukkan semua data yang ada pada tabel pada sebuah variabel sebaga
 sebelum <- c(78, 75, 67, 77, 70, 72, 28, 74, 77)
 sesudah <- c(100, 95, 70, 90, 90, 90, 89, 90, 100)
 ```
+<br>
 Kemudian lakukan pengecekan data menggunakan `data.frame` dan lihat hasilnya sebagai berikut
+<br>
 ```c
 data <- data.frame(
           group = rep(c("oksigen.sebelum", "oksigen.sesudah"), each = 9),
@@ -29,8 +33,10 @@ data <- data.frame(
        )
 print(data)
 ```
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170873599-581f7428-ca3a-48c5-b8b2-538af1bbe9ca.png)
 Setelah itu carilah standar deviasinya sebagai berikut
+<br>
 ```c
 sd_sebelum <- sd(sebelum)
 sd_sebelum
@@ -38,8 +44,12 @@ sd_sebelum
 sd_sesudah <- sd(sesudah)
 sd_sesudah
 ```
+<br>
 Dan didapatkan hasilnya sebagai berikut
+<br>
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170873797-2ca1843d-3e2b-44d0-8369-fbcb7e028fca.png)
+<br>
 <br>
 ![image](https://user-images.githubusercontent.com/89970736/170873835-d3c6a97d-1ea1-4ba4-8eb7-75adfe3c4cb5.png)
 <br>
