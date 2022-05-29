@@ -47,7 +47,6 @@ Dan didapatkan hasilnya sebagai berikut
 <br>
 
 ## ==> B
-<br>
 Carilah nilai t (p-value)
 Cari nilai t terutama p-value maka bisa menggunakan fungsi `t.test` yaitu sebagai berikut
 ```c
