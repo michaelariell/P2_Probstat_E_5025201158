@@ -39,12 +39,9 @@ sd_sebelum
 sd_sesudah <- sd(sesudah)
 sd_sesudah
 ```
-<br>
 Dan didapatkan hasilnya sebagai berikut
 <br>
-<br>
 ![image](https://user-images.githubusercontent.com/89970736/170873797-2ca1843d-3e2b-44d0-8369-fbcb7e028fca.png)
-<br>
 <br>
 ![image](https://user-images.githubusercontent.com/89970736/170873835-d3c6a97d-1ea1-4ba4-8eb7-75adfe3c4cb5.png)
 <br>
