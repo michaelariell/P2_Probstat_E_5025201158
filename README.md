@@ -30,8 +30,8 @@ data <- data.frame(
 print(data)
 ```
 ![image](https://user-images.githubusercontent.com/89970736/170873599-581f7428-ca3a-48c5-b8b2-538af1bbe9ca.png)
-Setelah itu carilah standar deviasinya sebagai berikut
 <br>
+Setelah itu carilah standar deviasinya sebagai berikut
 ```c
 sd_sebelum <- sd(sebelum)
 sd_sebelum
