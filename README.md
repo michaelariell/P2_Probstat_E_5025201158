@@ -58,7 +58,7 @@ t.test(sebelum, sesudah, alternative = "greater", var.equal = FALSE)
 Didapatkan hasi sebagai berikut
 <br>
 ![image](https://user-images.githubusercontent.com/89970736/170874085-bd64de61-6d2d-497e-b3fb-c45b0a240777.png)
-<br>
+
 
 ## ==> C
 <br>
