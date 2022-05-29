@@ -8,7 +8,6 @@ Michael Ariel Manihuruk     | PROBSTAT E                | 5025201158
 
 
 ## Penjelasan Soal No 1
-<br>
 Tabel :
 <br>
 ![image](https://user-images.githubusercontent.com/89970736/170873936-98b059f8-2f1d-4547-9b32-a7ddb743a5fb.png)
