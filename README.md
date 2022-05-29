@@ -59,25 +59,24 @@ Didapatkan hasi sebagai berikut
 <br>
 
 ## ==> C
-<br>
 Tentukanlah apakah terdapat pengaruh yang signifikan secara statistika dalam hal kadar saturasi oksigen, sebelum dan sesudah melakukan aktivitas 𝐴 jika diketahui tingkat signifikansi 𝛼 = 5% serta H0 : “tidak ada pengaruh yang signifikan secara statistika dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
 <br>
-<br>
 Pertama-tama kita lihat hasil kompirasi variabel menggunakan `var.test` sebagai berikut
-<br>
 ```c
 var.test(sebelum, sesudah)
 ```
 Didapatkan tampilan hasil sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170874247-ddc1b574-4e76-4039-9603-a2cc1e8876ba.png)
 <br>
 Selanjutnya, untuk melihat pengaruh jika tingkat signifikasi 5% dan tidak ada pengaruh yang signifikan secara statistika, maka adalah sebagai berikut
-<br>
 ```c
 t.test(sebelum, sesudah, mu = 0, alternative = "two.sided", var.equal = TRUE)
 ```
 Didapatkan tampilan hasil sebagai berikut
+<br>
 ![image](https://user-images.githubusercontent.com/89970736/170874372-6708e9a1-83ea-4bde-ba37-9fb57142ec46.png)
+<br>
 Dapat kita lihat bahwa mean dan convidence sama dengan 1b, yang berbeda adalah p-value dan df. Sehingga tidak memiliki pengaruh yang signifikan secara statistika
 
 ## Penjelasan Soal No 2
